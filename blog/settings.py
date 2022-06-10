@@ -79,12 +79,8 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog_django',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': 'NO',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -141,3 +137,6 @@ MESSAGE_TAGS = {
     constants.DEBUG: 'alert-info',
     constants.INFO: 'alert-info',
 }
+
+INSTALLED_APPS += ('django_summernote',)
+X_FRAME_OPTIONS = 'SAMEORIGIN'
