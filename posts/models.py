@@ -11,7 +11,7 @@ class Post(models.Model):
     conteudo_post = models.TextField()
     excerto_post = models.TextField()
     categoria_post = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING, blank=True, null=True)
-    imagem_post = models.ImageField(upload_to='post_img/%Y/%m/%d', blank=True, null=True)
+    imagem_post = models.ImageField(upload_to='post_img/%Y/%m/%d', blank=True, null=True, verbose_name='Imagem')
     publicado_post = models.BooleanField(default=False)
 
 
